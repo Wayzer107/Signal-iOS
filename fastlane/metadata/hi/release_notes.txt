@@ -1,3 +1,1 @@
-• Just in time for your next upgrade, the revamped device-to-device migration experience makes it easier than ever to securely transfer your Signal information from an old phone to a new phone over a local end-to-end encrypted wireless link. Connections now utilize Wi-Fi Aware networking for dramatically improved speed and reliability too.
-
-• We also added an alphabetized list (with a search bar!) when you tap on someone’s avatar to add them to another group, so you can help a new friend feel included even faster.
+• किसी व्यक्ति को दूसरे ग्रुप में जोड़ने के लिए, उसके अवतार पर टैप करने पर अब नामों की सूची वर्णमाला के क्रम में दिखेगी। साथ में सर्च बार भी होगा। इससे नए दोस्त को ग्रुप में शामिल करना और भी आसान और तेज़ हो जाएगा।
