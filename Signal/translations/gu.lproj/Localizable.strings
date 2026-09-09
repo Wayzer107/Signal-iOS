@@ -125,10 +125,10 @@
 "ADD_USER_TO_PROFILE_WHITELIST_OFFER" = "શું તમે આ વપરાશકર્તા સાથે તમારી પ્રોફાઇલ શેર કરવા માંગો છો?";
 
 /* Message shown in an action sheet when attempting to rotate AEP, but local backups is enabled. */
-"AEP_MANAGER_LOCAL_BACKUPS_DISABLE_REQUIRED" = "You must disable On-Device Backups before proceeding.";
+"AEP_MANAGER_LOCAL_BACKUPS_DISABLE_REQUIRED" = "આગળ વધતા પહેલાં તમારે ઑન-ડિવાઇસ બેકઅપને અક્ષમ કરવું આવશ્યક છે.";
 
 /* Button in an action sheet that takes the user to On-Device Backup settings. */
-"AEP_MANAGER_ON_DEVICE_BACKUP_SETTINGS_BUTTON" = "On-Device Backup Settings";
+"AEP_MANAGER_ON_DEVICE_BACKUP_SETTINGS_BUTTON" = "ડિવાઇસ પરના બેકઅપના સેટિંગ્સ";
 
 /* generic button text to acknowledge that the corresponding text was read. */
 "ALERT_ACTION_ACKNOWLEDGE" = "સમજાઈ ગયું";
@@ -155,7 +155,7 @@
 "ALERT_SAVE" = "સેવ કરો";
 
 /* Message for UI warning about an unknown contact thread. */
-"ALERT_UNKNOWN_THREAD_WARNING_CONTACT_MESSAGE" = "તમારી પાસે આ વ્યક્તિ સાથે કોમનમાં કોઈ ગ્રૂપ નથી. અનિચ્છનીય મેસેજ ટાળવા માટે સ્વીકારતા પહેલા વિનંતીઓની કાળજીપૂર્વક રિવ્યૂ કરો.";
+"ALERT_UNKNOWN_THREAD_WARNING_CONTACT_MESSAGE" = "તમારી પાસે આ વ્યક્તિ સાથે કોમનમાં કોઈ ગ્રૂપ નથી. અનિચ્છનીય મેસેજ ટાળવા માટે સ્વીકારતા પહેલાં વિનંતીઓની કાળજીપૂર્વક રિવ્યૂ કરો.";
 
 /* Message for UI warning about an unknown group thread. */
 "ALERT_UNKNOWN_THREAD_WARNING_GROUP_MESSAGE" = "આ ગ્રૂપ સાથે કોમનમાં કોઈ સભ્યો નથી. અનિચ્છનીય મેસેજથી બચવા માટે સ્વીકારતા કરતા પહેલાં વિનંતીઓની કાળજીપૂર્વક સમીક્ષા કરો.";
@@ -2138,16 +2138,16 @@
 "CHAT_LIST_LOCAL_FILE_BACKUP_RESTORE_PROGRESS_VIEW_TITLE" = "જોડાણો રિસ્ટોર કરવા";
 
 /* Progress label showing the amount uploaded out of the total. Embeds {{ %1$@ bytes uploaded, %2$@ total bytes to upload }}. */
-"CHAT_LIST_LOCAL_FILE_BACKUPS_PROGRESS_COPYING_ATTACHMENTS_FORMAT" = "%1$@ of %2$@";
+"CHAT_LIST_LOCAL_FILE_BACKUPS_PROGRESS_COPYING_ATTACHMENTS_FORMAT" = "%2$@માંથી %1$@";
 
 /* Title label shown in the chat list backup progress view while backup attachments are being uploaded. */
-"CHAT_LIST_LOCAL_FILE_BACKUPS_PROGRESS_COPYING_ATTACHMENTS_TITLE" = "Copying attachments";
+"CHAT_LIST_LOCAL_FILE_BACKUPS_PROGRESS_COPYING_ATTACHMENTS_TITLE" = "જોડાણો કૉપિ થાય છે";
 
 /* Title label shown in the chat list local file backup progress view while the attachments are being prepared */
-"CHAT_LIST_LOCAL_FILE_BACKUPS_PROGRESS_PREPARING_ATTACHMENTS" = "Preparing attachments";
+"CHAT_LIST_LOCAL_FILE_BACKUPS_PROGRESS_PREPARING_ATTACHMENTS" = "જોડાણો તૈયાર થાય છે";
 
 /* Title label shown in the chat list local file backup progress view while the backup file is being prepared. */
-"CHAT_LIST_LOCAL_FILE_BACKUPS_PROGRESS_PREPARING_BACKUP" = "Preparing backup";
+"CHAT_LIST_LOCAL_FILE_BACKUPS_PROGRESS_PREPARING_BACKUP" = "બેકઅપ તૈયાર કરી રહ્યાં છીએ";
 
 /* Message shown in the chat list when the chat list is empty. */
 "CHAT_LIST_NO_CHATS_SUBTITLE" = "તાજેતરની ચેટ અહીં દેખાશે.";
@@ -8078,10 +8078,10 @@
 "REGISTRATION_PROVIDER_FAILURE_MESSAGE_TRANSIENT" = "અમે તમારા નંબર પર SMS મોકલી શકતા નથી. કૃપા કરીને થોડીવાર પછી ફરીથી પ્રયાસ કરો.";
 
 /* Message for a button in the registration flow that allows restoring from a local backup */
-"REGISTRATION_RESTORE_FROM_LOCAL_BACKUP_BUTTON_MESSAGE" = "Restore your account and messages from a folder saved on your device";
+"REGISTRATION_RESTORE_FROM_LOCAL_BACKUP_BUTTON_MESSAGE" = "તમારા ડિવાઇસ પર સેવ કરેલા ફોલ્ડરમાંથી તમારા એકાઉન્ટ અને મેસેજ રિસ્ટોર કરો";
 
 /* Title for a button in the registration flow that allows restoring from a local backup */
-"REGISTRATION_RESTORE_FROM_LOCAL_BACKUP_BUTTON_TITLE" = "Restore On-Device Backup";
+"REGISTRATION_RESTORE_FROM_LOCAL_BACKUP_BUTTON_TITLE" = "ઓન-ડિવાઇસ બેકઅપ રિસ્ટોર કરો";
 
 /* Third step in directions for how to make a backup */
 "REGISTRATION_RESTORE_METHOD_MAKE_BACKUP_TUTORIAL_ENABLE_BACKUPS" = "બેકઅપ સક્ષમ કરો અને તમારું બેકઅપ પૂર્ણ થાય ત્યાં સુધી રાહ જુઓ";
@@ -8975,7 +8975,7 @@
 "SETTINGS_LOCAL_FILE_BACKUPS_LOCAL_BACKUP_IN_PROGRESS_MESSAGE" = "ઓન-ડિવાઇસ બેકઅપની પ્રગતિ ચાલુ હોય ત્યારે Signal સુરક્ષિત બેકઅપ કરી શકતા નથી. પછી ફરી પ્રયાસ કરો.";
 
 /* Label for a progress bar while attachments are being copied for an on-device backup. Embeds 1:{{%1$@ completed bytes copied, %2$@ total bytes to copy, %3$@ percentage complete }}. */
-"SETTINGS_LOCAL_FILE_BACKUPS_PROGRESS_COPYING_ATTACHMENTS" = "Copying attachments %1$@ of %2$@ (%3$@)";
+"SETTINGS_LOCAL_FILE_BACKUPS_PROGRESS_COPYING_ATTACHMENTS" = "%2$@માંથી %1$@ જોડાણ રિસ્ટોર થાય છે (%3$@)";
 
 /* Label for a progress bar while the attachments are being prepared for an on-device backup. Embeds 1:{{ percentage complete }}. */
 "SETTINGS_LOCAL_FILE_BACKUPS_PROGRESS_PREPARING_ATTACHMENTS" = "જોડાણ તૈયાર થાય છે (%1$@)";
@@ -8996,13 +8996,13 @@
 "SETTINGS_LOCAL_FILE_BACKUPS_TURN_OFF" = "બંધ કરો અને બેકઅપ ડિલીટ કરો";
 
 /* Button for an action sheet asking the user to confirm they would like to turn off local backups */
-"SETTINGS_LOCAL_FILE_BACKUPS_TURN_OFF_CONFIRMATION_BUTTON" = "Turn Off and Delete";
+"SETTINGS_LOCAL_FILE_BACKUPS_TURN_OFF_CONFIRMATION_BUTTON" = "બંધ કરો અને ડિલીટ કરો";
 
 /* Message for an action sheet asking the user to confirm they would like to turn off local backups */
-"SETTINGS_LOCAL_FILE_BACKUPS_TURN_OFF_CONFIRMATION_MESSAGE" = "Your backup will be deleted and no new backups will be made.";
+"SETTINGS_LOCAL_FILE_BACKUPS_TURN_OFF_CONFIRMATION_MESSAGE" = "તમારું બેકઅપ ડિલીટ કરવામાં આવશે અને કોઈ નવા બેકઅપ બનાવવામાં આવશે નહીં.";
 
 /* Title for an action sheet asking the user to confirm they would like to turn off local backups */
-"SETTINGS_LOCAL_FILE_BACKUPS_TURN_OFF_CONFIRMATION_TITLE" = "Turn Off and Delete Backup?";
+"SETTINGS_LOCAL_FILE_BACKUPS_TURN_OFF_CONFIRMATION_TITLE" = "બેકઅપ બંધ કરી અને ડિલીટ કરીએ?";
 
 /* Message shown on an action sheet when a user's backup fails to delete. Embeds {{ local file backup location }} */
 "SETTINGS_LOCAL_FILE_BACKUPS_TURNING_OFF_ERROR_MESSAGE_FORMAT" = "એક એરરને કારણે તમારા બેકઅપને ડિલીટ કરી શક્યા નથી. તમારે ફોલ્ડરને જાતે ડિલીટ કરવું પડશે. Files ઍપમાં, “%1$@” પર જાઓ અને ફોલ્ડર અને તેમાં રહેલ વસ્તુઓને જાતે ડિલીટ કરો. કોઈ નવા બેકઅપ બનાવવામાં આવશે નહીં.";
