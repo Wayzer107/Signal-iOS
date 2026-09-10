@@ -1028,7 +1028,7 @@
 "BACKUP_SETTINGS_ENABLED_LAST_BACKUP_LABEL" = "גיבוי אחרון";
 
 /* Label for a cell on the backups landing page explaining when the user's last backup occurred. */
-"BACKUP_SETTINGS_ENABLED_LAST_BACKUP_LABEL_LANDING_PAGE" = "Last backup";
+"BACKUP_SETTINGS_ENABLED_LAST_BACKUP_LABEL_LANDING_PAGE" = "גיבוי אחרון";
 
 /* Text explaining that the user's last backup was in the past. Embeds 1:{{ the date of the backup }} and 2:{{ the time of the backup }}. */
 "BACKUP_SETTINGS_ENABLED_LAST_BACKUP_PAST_FORMAT" = "%1$@ בשעה %2$@";
@@ -3197,7 +3197,7 @@
 "DEVICE_TRANSFER_STATUS_NEW_DEVICE_CONNECTING_WIFI_AWARE_MESSAGE" = "יש לקרב את המכשיר הישן שלך, ולוודא שהפעלת Wi–Fi ו–Bluetooth. יש לבחור את המכשיר הזה מרשימת המכשירים במכשיר הישן.  אם המכשיר לא נמצא ברשימה שבמכשיר הישן, יש לבחור באפשרות ׳צימוד מכשיר חדש׳ למטה.";
 
 /* Title for paring an old device to transfer to. */
-"DEVICE_TRANSFER_STATUS_NEW_DEVICE_PAIR_DEVICE" = "Pair This device";
+"DEVICE_TRANSFER_STATUS_NEW_DEVICE_PAIR_DEVICE" = "Pair This Device";
 
 /* Status message on new device when transfer is starting. */
 "DEVICE_TRANSFER_STATUS_NEW_DEVICE_STARTING" = "בהמתנה לחיבור למכשיר הישן…";
@@ -3227,7 +3227,7 @@
 "DEVICE_TRANSFER_STATUS_OLD_DEVICE_CONNECTING_WIFI_AWARE_MESSAGE" = "יש לקרב את המכשיר החדש שלך, ולוודא שהפעלת Wi–Fi ו–Bluetooth.";
 
 /* Title for paring an new device to transfer to. */
-"DEVICE_TRANSFER_STATUS_OLD_DEVICE_PAIR_DEVICE" = "Pair With New device";
+"DEVICE_TRANSFER_STATUS_OLD_DEVICE_PAIR_DEVICE" = "Pair With New Device";
 
 /* Status message on old device when transfer is starting. */
 "DEVICE_TRANSFER_STATUS_OLD_DEVICE_STARTING" = "בהמתנה לחיבור למכשיר החדש…";
@@ -3251,7 +3251,7 @@
 "DEVICE_TRANSFER_TUTORIAL_TAP_PAIR_DEVICE_MESSAGE" = "Tap “Pair This Device” below";
 
 /* Message informing the user to tap on the pair device button */
-"DEVICE_TRANSFER_TUTORIAL_TAP_PAIR_NEW_DEVICE_MESSAGE" = "Tap “Pair With New Decvice” below";
+"DEVICE_TRANSFER_TUTORIAL_TAP_PAIR_NEW_DEVICE_MESSAGE" = "Tap “Pair With New Device” below";
 
 /* table cell label in conversation settings */
 "DISAPPEARING_MESSAGES" = "הודעות נעלמות";
@@ -5090,10 +5090,10 @@
 "INBOX_VIEW_ARCHIVE_MODE_REMINDER" = "צ׳אטים שמאוחסנים בארכיון יועברו אל תיבת הדואר הנכנס כשהודעה חדשה מגיעה.";
 
 /* Body of prompt notifying device transfer will continue on other device. */
-"INCOMING_DEVICE_TRANSFER_CONTINUE_BODY" = "Continue transferring your account on your other device.";
+"INCOMING_DEVICE_TRANSFER_CONTINUE_BODY" = "יש להמשיך את העברת החשבון שלך במכשיר האחר שלך.";
 
 /* Title of prompt notifying device transfer will continue on other device. */
-"INCOMING_DEVICE_TRANSFER_CONTINUE_TITLE" = "Continue on your other device";
+"INCOMING_DEVICE_TRANSFER_CONTINUE_TITLE" = "המשך במכשיר האחר שלך";
 
 /* info message text in conversation view */
 "INCOMING_VIDEO_CALL" = "שיחת וידאו נכנסת";
@@ -6791,7 +6791,7 @@
 "OUTGOING_DEVICE_TRANSFER_COMPLETE_TITLE" = "העברה הושלמה";
 
 /* Body of prompt confirming the start of device transfer. */
-"OUTGOING_DEVICE_TRANSFER_CONFIRM_BODY" = "Your account will be transferred to a new device. This device will be able to see your groups and contacts, access your chats, and send messages in your name.";
+"OUTGOING_DEVICE_TRANSFER_CONFIRM_BODY" = "החשבון שלך יועבר למכשיר חדש. המכשיר הזה יוכל לראות את הקבוצות ואנשי הקשר שלך, לקבל גישה לצ׳אטים שלך, ולשלוח הודעות בשמך.";
 
 /* Title of prompt confirming the start of device transfer. */
 "OUTGOING_DEVICE_TRANSFER_CONFIRM_TITLE" = "Transfer Account to \"%1$@\"?";
@@ -8633,10 +8633,10 @@
 "SELECT_ALL" = "בחירת הכל";
 
 /* Placeholder text for the search bar on the 'Select Contact' view */
-"SELECT_CONTACT_FOR_SHARING_SEARCH_BAR_PLACEHOLDER" = "Search";
+"SELECT_CONTACT_FOR_SHARING_SEARCH_BAR_PLACEHOLDER" = "חיפוש";
 
 /* Title for the 'Select Contact' view */
-"SELECT_CONTACT_FOR_SHARING_VIEW_TITLE" = "Select Contact";
+"SELECT_CONTACT_FOR_SHARING_VIEW_TITLE" = "בחר איש קשר";
 
 /* No comment provided by engineer. */
 "SEND_AGAIN_BUTTON" = "שלח שוב";
@@ -9098,19 +9098,19 @@
 "SETTINGS_NAV_BAR_TITLE" = "הגדרות";
 
 /* Label for the setting controlling whether the app icon badge counts unread messages or unread chats. */
-"SETTINGS_NOTIFICATION_BADGE_COUNT" = "Badge Count";
+"SETTINGS_NOTIFICATION_BADGE_COUNT" = "ספירת גשרים";
 
 /* Explanation for the setting controlling whether the app icon badge counts unread messages or unread chats. */
-"SETTINGS_NOTIFICATION_BADGE_COUNT_FOOTER" = "Select if the badge count displays the number of unread messages or the number of unread chats";
+"SETTINGS_NOTIFICATION_BADGE_COUNT_FOOTER" = "לבחור האם מחוון ספירת ההודעות יציג את מספר ההודעות שלא נקראו או את מספר הצ׳אטים שלא נקראו";
 
 /* A setting controlling whether muted conversations are shown in the badge count */
 "SETTINGS_NOTIFICATION_BADGE_COUNT_INCLUDES_MUTED_CONVERSATIONS" = "כלילת צ׳אטים מושתקים";
 
 /* Label for the option that makes the app icon badge show the number of unread chats. */
-"SETTINGS_NOTIFICATION_BADGE_COUNT_UNREAD_CHATS" = "Unread Chats";
+"SETTINGS_NOTIFICATION_BADGE_COUNT_UNREAD_CHATS" = "צ׳אטים שלא נקראו";
 
 /* Label for the option that makes the app icon badge show the number of unread messages. */
-"SETTINGS_NOTIFICATION_BADGE_COUNT_UNREAD_MESSAGES" = "Unread Messages";
+"SETTINGS_NOTIFICATION_BADGE_COUNT_UNREAD_MESSAGES" = "הודעות שלא נקראו";
 
 /* table section footer */
 "SETTINGS_NOTIFICATION_CONTENT_DESCRIPTION" = "התראות של שיחה והודעה יכולות להופיע בזמן שהטלפון שלך נעול.";
@@ -9812,34 +9812,34 @@
 "SETTINGS_VERSION" = "גרסה";
 
 /* Title for the settings page controlling which notifications are still shown for muted chats. Also used as the label for the rows that link to this page. */
-"SETTINGS_WHILE_MUTED" = "While Muted";
+"SETTINGS_WHILE_MUTED" = "כאשר הצליל מושתק";
 
 /* Label for the switch controlling whether calls ring or notify in muted chats. */
-"SETTINGS_WHILE_MUTED_CALLS" = "Calls";
+"SETTINGS_WHILE_MUTED_CALLS" = "שיחות";
 
 /* Explanation for the switch controlling whether calls ring or notify while this chat is muted. */
-"SETTINGS_WHILE_MUTED_CALLS_CHAT_FOOTER" = "Ring or notify when a call is started while this chat is muted.";
+"SETTINGS_WHILE_MUTED_CALLS_CHAT_FOOTER" = "צלצול או התראה כשמתחילה שיחה בזמן שהצ׳אט הזה מושתק.";
 
 /* Explanation for the switch controlling whether calls ring or notify in muted chats. */
-"SETTINGS_WHILE_MUTED_CALLS_FOOTER" = "Ring or notify when a call is started in muted chats.";
+"SETTINGS_WHILE_MUTED_CALLS_FOOTER" = "צלצול או התראה כשמתחילה שיחה בצ׳אטים מושתקים.";
 
 /* Label for the switch controlling whether mentions of you notify in muted chats. */
-"SETTINGS_WHILE_MUTED_MENTIONS" = "Mentions";
+"SETTINGS_WHILE_MUTED_MENTIONS" = "אזכורים";
 
 /* Explanation for the switch controlling whether mentions of you notify while this chat is muted. */
-"SETTINGS_WHILE_MUTED_MENTIONS_CHAT_FOOTER" = "Notify when you are mentioned while this chat is muted.";
+"SETTINGS_WHILE_MUTED_MENTIONS_CHAT_FOOTER" = "התראה כשהוזכרת בזמן שהצ׳אט הזה מושתק.";
 
 /* Explanation for the switch controlling whether mentions of you notify in muted chats. */
-"SETTINGS_WHILE_MUTED_MENTIONS_FOOTER" = "Notify when you are mentioned in muted chats.";
+"SETTINGS_WHILE_MUTED_MENTIONS_FOOTER" = "התראה כשהוזכרת בצ׳אטים מושתקים.";
 
 /* Label for the switch controlling whether replies to your messages notify in muted chats. */
-"SETTINGS_WHILE_MUTED_REPLIES" = "Replies";
+"SETTINGS_WHILE_MUTED_REPLIES" = "תשובות";
 
 /* Explanation for the switch controlling whether replies to your messages notify while this chat is muted. */
-"SETTINGS_WHILE_MUTED_REPLIES_CHAT_FOOTER" = "Notify when someone replies to your message while this chat is muted.";
+"SETTINGS_WHILE_MUTED_REPLIES_CHAT_FOOTER" = "התראה כשמשיבים להודעות שלך בזמן שהצ׳אט הזה מושתק.";
 
 /* Explanation for the switch controlling whether replies to your messages notify in muted chats. */
-"SETTINGS_WHILE_MUTED_REPLIES_FOOTER" = "Notify when someone replies to your message in muted chats.";
+"SETTINGS_WHILE_MUTED_REPLIES_FOOTER" = "התראה כשמשיבים להודעות שלך בצ׳אטים מושתקים.";
 
 /* action sheet item to open native mail app */
 "SHARE_ACTION_MAIL" = "דוא״ל";

@@ -1028,7 +1028,7 @@
 "BACKUP_SETTINGS_ENABLED_LAST_BACKUP_LABEL" = "Апошняя рэзервовая копія";
 
 /* Label for a cell on the backups landing page explaining when the user's last backup occurred. */
-"BACKUP_SETTINGS_ENABLED_LAST_BACKUP_LABEL_LANDING_PAGE" = "Last backup";
+"BACKUP_SETTINGS_ENABLED_LAST_BACKUP_LABEL_LANDING_PAGE" = "Апошняя рэзервовая копія";
 
 /* Text explaining that the user's last backup was in the past. Embeds 1:{{ the date of the backup }} and 2:{{ the time of the backup }}. */
 "BACKUP_SETTINGS_ENABLED_LAST_BACKUP_PAST_FORMAT" = "%1$@ у %2$@";
@@ -3197,7 +3197,7 @@
 "DEVICE_TRANSFER_STATUS_NEW_DEVICE_CONNECTING_WIFI_AWARE_MESSAGE" = "Паднясіце бліжэй сваю старую прыладу i праверце, каб на ёй былі ўключаны Wi-Fi і Bluetooth. Выберыце гэту прыладу са спісу прылад на старой прыладзе.  Калі прылады няма на старой прыладзе, выберыце «Спалучыць новую прыладу» ніжэй.";
 
 /* Title for paring an old device to transfer to. */
-"DEVICE_TRANSFER_STATUS_NEW_DEVICE_PAIR_DEVICE" = "Pair This device";
+"DEVICE_TRANSFER_STATUS_NEW_DEVICE_PAIR_DEVICE" = "Pair This Device";
 
 /* Status message on new device when transfer is starting. */
 "DEVICE_TRANSFER_STATUS_NEW_DEVICE_STARTING" = "Чакаем падключэння да старой прылады…";
@@ -3227,7 +3227,7 @@
 "DEVICE_TRANSFER_STATUS_OLD_DEVICE_CONNECTING_WIFI_AWARE_MESSAGE" = "Паднясіце бліжэй сваю новую прыладу i праверце, каб на ёй былі ўключаны Wi-Fi і Bluetooth.";
 
 /* Title for paring an new device to transfer to. */
-"DEVICE_TRANSFER_STATUS_OLD_DEVICE_PAIR_DEVICE" = "Pair With New device";
+"DEVICE_TRANSFER_STATUS_OLD_DEVICE_PAIR_DEVICE" = "Pair With New Device";
 
 /* Status message on old device when transfer is starting. */
 "DEVICE_TRANSFER_STATUS_OLD_DEVICE_STARTING" = "Чакаем падключэння да новай прылады…";
@@ -3251,7 +3251,7 @@
 "DEVICE_TRANSFER_TUTORIAL_TAP_PAIR_DEVICE_MESSAGE" = "Tap “Pair This Device” below";
 
 /* Message informing the user to tap on the pair device button */
-"DEVICE_TRANSFER_TUTORIAL_TAP_PAIR_NEW_DEVICE_MESSAGE" = "Tap “Pair With New Decvice” below";
+"DEVICE_TRANSFER_TUTORIAL_TAP_PAIR_NEW_DEVICE_MESSAGE" = "Tap “Pair With New Device” below";
 
 /* table cell label in conversation settings */
 "DISAPPEARING_MESSAGES" = "Знікаючыя паведамленні";
@@ -5090,10 +5090,10 @@
 "INBOX_VIEW_ARCHIVE_MODE_REMINDER" = "Архіваваныя чаты будуць перасунуты ў папку «Уваходныя», калі прыйдзе новае паведамленне.";
 
 /* Body of prompt notifying device transfer will continue on other device. */
-"INCOMING_DEVICE_TRANSFER_CONTINUE_BODY" = "Continue transferring your account on your other device.";
+"INCOMING_DEVICE_TRANSFER_CONTINUE_BODY" = "Працягвайце перанос свайго ўліковага запісу на іншай прыладзе.";
 
 /* Title of prompt notifying device transfer will continue on other device. */
-"INCOMING_DEVICE_TRANSFER_CONTINUE_TITLE" = "Continue on your other device";
+"INCOMING_DEVICE_TRANSFER_CONTINUE_TITLE" = "Працягвайце на сваёй іншай прыладзе";
 
 /* info message text in conversation view */
 "INCOMING_VIDEO_CALL" = "Уваходны відэазванок";
@@ -6791,7 +6791,7 @@
 "OUTGOING_DEVICE_TRANSFER_COMPLETE_TITLE" = "Перанос завершаны";
 
 /* Body of prompt confirming the start of device transfer. */
-"OUTGOING_DEVICE_TRANSFER_CONFIRM_BODY" = "Your account will be transferred to a new device. This device will be able to see your groups and contacts, access your chats, and send messages in your name.";
+"OUTGOING_DEVICE_TRANSFER_CONFIRM_BODY" = "Ваш уліковы запіс будзе перанесены на новую прыладу. Гэта прылада зможа бачыць вашы групы і кантакты, мець доступ да вашых чатаў і адпраўляць паведамленні ад вашага імя.";
 
 /* Title of prompt confirming the start of device transfer. */
 "OUTGOING_DEVICE_TRANSFER_CONFIRM_TITLE" = "Transfer Account to \"%1$@\"?";
@@ -8633,10 +8633,10 @@
 "SELECT_ALL" = "Выбраць усе";
 
 /* Placeholder text for the search bar on the 'Select Contact' view */
-"SELECT_CONTACT_FOR_SHARING_SEARCH_BAR_PLACEHOLDER" = "Search";
+"SELECT_CONTACT_FOR_SHARING_SEARCH_BAR_PLACEHOLDER" = "Пошук";
 
 /* Title for the 'Select Contact' view */
-"SELECT_CONTACT_FOR_SHARING_VIEW_TITLE" = "Select Contact";
+"SELECT_CONTACT_FOR_SHARING_VIEW_TITLE" = "Выбраць кантакт";
 
 /* No comment provided by engineer. */
 "SEND_AGAIN_BUTTON" = "Адправіць яшчэ раз";
@@ -9098,7 +9098,7 @@
 "SETTINGS_NAV_BAR_TITLE" = "Налады";
 
 /* Label for the setting controlling whether the app icon badge counts unread messages or unread chats. */
-"SETTINGS_NOTIFICATION_BADGE_COUNT" = "Badge Count";
+"SETTINGS_NOTIFICATION_BADGE_COUNT" = "Лічыльнік апавяшчэнняў";
 
 /* Explanation for the setting controlling whether the app icon badge counts unread messages or unread chats. */
 "SETTINGS_NOTIFICATION_BADGE_COUNT_FOOTER" = "Select if the badge count displays the number of unread messages or the number of unread chats";
@@ -9812,34 +9812,34 @@
 "SETTINGS_VERSION" = "Версія";
 
 /* Title for the settings page controlling which notifications are still shown for muted chats. Also used as the label for the rows that link to this page. */
-"SETTINGS_WHILE_MUTED" = "While Muted";
+"SETTINGS_WHILE_MUTED" = "Калi адключаны апавяшчэннi";
 
 /* Label for the switch controlling whether calls ring or notify in muted chats. */
-"SETTINGS_WHILE_MUTED_CALLS" = "Calls";
+"SETTINGS_WHILE_MUTED_CALLS" = "Званкі";
 
 /* Explanation for the switch controlling whether calls ring or notify while this chat is muted. */
-"SETTINGS_WHILE_MUTED_CALLS_CHAT_FOOTER" = "Ring or notify when a call is started while this chat is muted.";
+"SETTINGS_WHILE_MUTED_CALLS_CHAT_FOOTER" = "Даваць званок або апавяшчаць, калі пачынаецца званок у чаце з адключанымі апавяшчэннямі.";
 
 /* Explanation for the switch controlling whether calls ring or notify in muted chats. */
-"SETTINGS_WHILE_MUTED_CALLS_FOOTER" = "Ring or notify when a call is started in muted chats.";
+"SETTINGS_WHILE_MUTED_CALLS_FOOTER" = "Даваць званок або апавяшчаць, калі пачынаецца званок у чатах з адключанымі апавяшчэннямі.";
 
 /* Label for the switch controlling whether mentions of you notify in muted chats. */
-"SETTINGS_WHILE_MUTED_MENTIONS" = "Mentions";
+"SETTINGS_WHILE_MUTED_MENTIONS" = "Згадванні";
 
 /* Explanation for the switch controlling whether mentions of you notify while this chat is muted. */
-"SETTINGS_WHILE_MUTED_MENTIONS_CHAT_FOOTER" = "Notify when you are mentioned while this chat is muted.";
+"SETTINGS_WHILE_MUTED_MENTIONS_CHAT_FOOTER" = "Апавяшчаць, калі вас згадваюць у чаце з адключанымі апавяшчэннямі.";
 
 /* Explanation for the switch controlling whether mentions of you notify in muted chats. */
-"SETTINGS_WHILE_MUTED_MENTIONS_FOOTER" = "Notify when you are mentioned in muted chats.";
+"SETTINGS_WHILE_MUTED_MENTIONS_FOOTER" = "Апавяшчаць, калі вас згадваюць у чатах з адключанымі апавяшчэннямі.";
 
 /* Label for the switch controlling whether replies to your messages notify in muted chats. */
-"SETTINGS_WHILE_MUTED_REPLIES" = "Replies";
+"SETTINGS_WHILE_MUTED_REPLIES" = "Адказы";
 
 /* Explanation for the switch controlling whether replies to your messages notify while this chat is muted. */
-"SETTINGS_WHILE_MUTED_REPLIES_CHAT_FOOTER" = "Notify when someone replies to your message while this chat is muted.";
+"SETTINGS_WHILE_MUTED_REPLIES_CHAT_FOOTER" = "Апавяшчаць, калі хтосьці адказвае на ваша паведамленне ў чаце з адключанымі апавяшчэннямі.";
 
 /* Explanation for the switch controlling whether replies to your messages notify in muted chats. */
-"SETTINGS_WHILE_MUTED_REPLIES_FOOTER" = "Notify when someone replies to your message in muted chats.";
+"SETTINGS_WHILE_MUTED_REPLIES_FOOTER" = "Апавяшчаць, калі хтосьці адказвае на ваша паведамленне ў чатах з адключанымі апавяшчэннямі.";
 
 /* action sheet item to open native mail app */
 "SHARE_ACTION_MAIL" = "Пошта";
