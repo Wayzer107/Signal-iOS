@@ -1,0 +1,118 @@
+name: Debug IPA
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Path format pulled from https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md#xcode
+  DEVELOPER_DIR: /Applications/Xcode_26.6.app
+
+permissions:
+  contents: write
+
+jobs:
+  build_debug_ipa:
+    name: Build Debug IPA
+    timeout-minutes: 30
+    runs-on: macos-26-xlarge
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Check Xcode version
+        run: |
+          Scripts/check_xcode_version.py --relaxed
+
+      - name: Download Metal toolchain
+        run: |
+          xcodebuild -downloadComponent MetalToolchain
+
+      - name: Download iOS platform
+        run: |
+          xcodebuild -downloadPlatform iOS
+
+      - uses: ./.github/actions/clone-everything
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1 # Reads .ruby-version file by default
+        with:
+          bundler-cache: true
+
+      - name: Build unsigned Debug archive
+        run: |
+          set -o pipefail
+          xcodebuild archive \
+            -workspace Signal.xcworkspace \
+            -scheme Signal \
+            -configuration Debug \
+            -destination "generic/platform=iOS" \
+            -archivePath "$RUNNER_TEMP/Signal.xcarchive" \
+            -disableAutomaticPackageResolution \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGN_ENTITLEMENTS="" \
+            DEVELOPMENT_TEAM="" \
+            PROVISIONING_PROFILE_SPECIFIER="" \
+            | tee "$RUNNER_TEMP/archive.log" \
+            | xcbeautify --renderer github-actions --disable-logging
+
+      - name: Upload build logs
+        uses: actions/upload-artifact@v6
+        if: failure()
+        with:
+          name: Debug IPA Logs
+          path: ${{ runner.temp }}/archive.log
+
+      - name: Package unsigned IPA
+        id: package
+        run: |
+          set -eo pipefail
+          PAYLOAD_DIR="$RUNNER_TEMP/Payload"
+          rm -rf "$PAYLOAD_DIR"
+          mkdir -p "$PAYLOAD_DIR"
+          cp -R "$RUNNER_TEMP/Signal.xcarchive/Products/Applications/Signal.app" "$PAYLOAD_DIR/"
+
+          SHORT_SHA="$(git rev-parse --short HEAD)"
+          IPA_NAME="Signal-debug-${SHORT_SHA}.ipa"
+          (cd "$RUNNER_TEMP" && zip -r -y -q "$GITHUB_WORKSPACE/$IPA_NAME" Payload)
+
+          echo "ipa_name=$IPA_NAME" >> "$GITHUB_OUTPUT"
+          echo "short_sha=$SHORT_SHA" >> "$GITHUB_OUTPUT"
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG_NAME: debug-build-${{ github.run_number }}
+          IPA_NAME: ${{ steps.package.outputs.ipa_name }}
+          SHORT_SHA: ${{ steps.package.outputs.short_sha }}
+        run: |
+          set -eo pipefail
+          NOTES_FILE="$RUNNER_TEMP/release-notes.md"
+          {
+            printf '%s\n\n' "Automated **unsigned, debug-configuration** build from commit ${GITHUB_SHA}."
+            printf '%s\n' "⚠️ **Not code-signed.** This IPA has \`CODE_SIGNING_ALLOWED=NO\` and will not install"
+            printf '%s\n' "as-is on a normal iPhone. Resign it yourself (e.g. with Sideloadly/AltStore using a"
+            printf '%s\n\n' "free Apple ID) or install it on a jailbroken/TrollStore device."
+            printf '%s\n' "⚠️ **Exposes internal debug tooling**, including *Settings → Internal → Export"
+            printf '%s\n' "Database*, which shares your local (still-encrypted) database file plus its"
+            printf '%s\n' "decryption key. Only install this build on a device/account you control for testing"
+            printf '%s\n' "purposes — never use it with an account containing data you're not willing to expose."
+          } > "$NOTES_FILE"
+
+          gh release create "$TAG_NAME" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "Debug build ${{ github.run_number }} ($SHORT_SHA)" \
+            --notes-file "$NOTES_FILE" \
+            --prerelease \
+            "$IPA_NAME"
