@@ -63,9 +63,22 @@ jobs:
             CODE_SIGN_ENTITLEMENTS="" \
             DEVELOPMENT_TEAM="" \
             PROVISIONING_PROFILE_SPECIFIER="" \
+            SIGNAL_APP_GROUP="group.verify-override-test.1" \
+            SIGNAL_APP_GROUP_STAGING="group.verify-override-test.2" \
             2>&1 \
             | tee "$RUNNER_TEMP/archive.log" \
             | xcbeautify --renderer github-actions --disable-logging
+
+      - name: Diagnostic - verify SIGNAL_APP_GROUP override
+        run: |
+          set -eo pipefail
+          INFO_PLIST="$RUNNER_TEMP/Signal.xcarchive/Products/Applications/Signal.app/Info.plist"
+          echo "--- OWSApplicationGroupIdentifier ---"
+          /usr/libexec/PlistBuddy -c "Print :OWSApplicationGroupIdentifier" "$INFO_PLIST"
+          echo "--- OWSApplicationGroupIdentifierStaging ---"
+          /usr/libexec/PlistBuddy -c "Print :OWSApplicationGroupIdentifierStaging" "$INFO_PLIST"
+          echo "--- OWSBundleIDPrefix (should be unaffected) ---"
+          /usr/libexec/PlistBuddy -c "Print :OWSBundleIDPrefix" "$INFO_PLIST"
 
       - name: Package unsigned IPA
         id: package
