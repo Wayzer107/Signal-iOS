@@ -4,7 +4,16 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      app_group:
+        description: "App Group ID to build against, e.g. group.abc123.1. Must be one your signing profile actually grants, or the app crashes on launch. Leave empty for the project default."
+        required: false
+        default: ""
+      app_group_staging:
+        description: "Staging App Group ID. Leave empty for the project default."
+        required: false
+        default: ""
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -48,8 +57,19 @@ jobs:
           bundler-cache: true
 
       - name: Build unsigned Debug archive
+        env:
+          APP_GROUP: ${{ inputs.app_group }}
+          APP_GROUP_STAGING: ${{ inputs.app_group_staging }}
         run: |
           set -o pipefail
+          OVERRIDES=()
+          if [ -n "$APP_GROUP" ]; then
+            OVERRIDES+=("SIGNAL_APP_GROUP=$APP_GROUP")
+          fi
+          if [ -n "$APP_GROUP_STAGING" ]; then
+            OVERRIDES+=("SIGNAL_APP_GROUP_STAGING=$APP_GROUP_STAGING")
+          fi
+          echo "Build setting overrides: ${OVERRIDES[*]:-(none, using project defaults)}"
           xcodebuild archive \
             -workspace Signal.xcworkspace \
             -scheme Signal \
@@ -63,6 +83,7 @@ jobs:
             CODE_SIGN_ENTITLEMENTS="" \
             DEVELOPMENT_TEAM="" \
             PROVISIONING_PROFILE_SPECIFIER="" \
+            "${OVERRIDES[@]}" \
             2>&1 \
             | tee "$RUNNER_TEMP/archive.log" \
             | xcbeautify --renderer github-actions --disable-logging
@@ -80,6 +101,9 @@ jobs:
           IPA_NAME="Signal-debug-${SHORT_SHA}.ipa"
           (cd "$RUNNER_TEMP" && zip -r -y -q "$GITHUB_WORKSPACE/$IPA_NAME" Payload)
 
+          APP_GROUP_USED="$(/usr/libexec/PlistBuddy -c 'Print :OWSApplicationGroupIdentifier' \
+            "$PAYLOAD_DIR/Signal.app/Info.plist")"
+          echo "app_group_used=$APP_GROUP_USED" >> "$GITHUB_OUTPUT"
           echo "ipa_name=$IPA_NAME" >> "$GITHUB_OUTPUT"
           echo "short_sha=$SHORT_SHA" >> "$GITHUB_OUTPUT"
 
@@ -89,6 +113,7 @@ jobs:
           TAG_NAME: debug-build-${{ github.run_number }}-${{ github.run_attempt }}
           IPA_NAME: ${{ steps.package.outputs.ipa_name }}
           SHORT_SHA: ${{ steps.package.outputs.short_sha }}
+          APP_GROUP_USED: ${{ steps.package.outputs.app_group_used }}
         run: |
           set -eo pipefail
           NOTES_FILE="$RUNNER_TEMP/release-notes.md"
@@ -101,6 +126,8 @@ jobs:
             printf '%s\n' "Database*, which shares your local (still-encrypted) database file and then copies"
             printf '%s\n' "its decryption key to the clipboard. Only install this build on a device/account you control for testing"
             printf '%s\n' "purposes — never use it with an account containing data you're not willing to expose."
+            printf '\n%s\n' "App Group required by this build: \`${APP_GROUP_USED}\`. Whatever you resign this"
+            printf '%s\n' "with must grant that exact App Group, or it will crash on launch."
           } > "$NOTES_FILE"
 
           gh release create "$TAG_NAME" \

@@ -39,8 +39,8 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.$(SIGNAL_BUNDLEID_PREFIX).signal.group</string>
-		<string>group.$(SIGNAL_BUNDLEID_PREFIX).signal.group.staging</string>
+		<string>$(SIGNAL_APP_GROUP)</string>
+		<string>$(SIGNAL_APP_GROUP_STAGING)</string>
 	</array>
 	<key>com.apple.security.hardened-process</key>
 	<true/>

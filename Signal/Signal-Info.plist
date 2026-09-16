@@ -107,6 +107,10 @@
 	<string>$(SIGNAL_BUNDLEID_PREFIX)</string>
 	<key>OWSMerchantID</key>
 	<string>$(SIGNAL_MERCHANTID)</string>
+	<key>OWSApplicationGroupIdentifier</key>
+	<string>$(SIGNAL_APP_GROUP)</string>
+	<key>OWSApplicationGroupIdentifierStaging</key>
+	<string>$(SIGNAL_APP_GROUP_STAGING)</string>
 	<key>PHPhotoLibraryPreventAutomaticLimitedAccessAlert</key>
 	<true/>
 	<key>UIBackgroundModes</key>
