@@ -21892,6 +21892,8 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -DTESTABLE_BUILD";
 				SDKROOT = iphoneos;
+				SIGNAL_APP_GROUP = "group.$(SIGNAL_BUNDLEID_PREFIX).signal.group";
+				SIGNAL_APP_GROUP_STAGING = "group.$(SIGNAL_BUNDLEID_PREFIX).signal.group.staging";
 				SIGNAL_BUNDLEID_PREFIX = org.whispersystems;
 				SIGNAL_MERCHANTID = org.signalfoundation;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -22153,6 +22155,8 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_SWIFT_FLAGS = "$(inherited) -DTESTABLE_BUILD";
 				SDKROOT = iphoneos;
+				SIGNAL_APP_GROUP = "group.$(SIGNAL_BUNDLEID_PREFIX).signal.group";
+				SIGNAL_APP_GROUP_STAGING = "group.$(SIGNAL_BUNDLEID_PREFIX).signal.group.staging";
 				SIGNAL_BUNDLEID_PREFIX = org.whispersystems;
 				SIGNAL_MERCHANTID = org.signalfoundation;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -22419,6 +22423,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DTESTABLE_BUILD -DUSE_DEBUG_UI";
 				SDKROOT = iphoneos;
+				SIGNAL_APP_GROUP = "group.$(SIGNAL_BUNDLEID_PREFIX).signal.group";
+				SIGNAL_APP_GROUP_STAGING = "group.$(SIGNAL_BUNDLEID_PREFIX).signal.group.staging";
 				SIGNAL_BUNDLEID_PREFIX = org.whispersystems;
 				SIGNAL_MERCHANTID = org.signalfoundation;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -22522,6 +22528,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				SIGNAL_APP_GROUP = "group.$(SIGNAL_BUNDLEID_PREFIX).signal.group";
+				SIGNAL_APP_GROUP_STAGING = "group.$(SIGNAL_BUNDLEID_PREFIX).signal.group.staging";
 				SIGNAL_BUNDLEID_PREFIX = org.whispersystems;
 				SIGNAL_MERCHANTID = org.signalfoundation;
 				SWIFT_COMPILATION_MODE = wholemodule;
